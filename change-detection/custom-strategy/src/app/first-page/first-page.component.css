@@ -1,0 +1,8 @@
+:host {
+    display: flex;
+    margin: 5px;
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 10px);
+}

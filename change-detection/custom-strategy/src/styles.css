@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+h1, p {
+    text-align: center;
+}
+
+.component-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.has-on-push::before {
+    content: 'O';
+    color: green;
+}
+
+.has-on-push {
+    border: 1px solid black;
+}
+
+.colorize {
+    background-color: aquamarine;
+}

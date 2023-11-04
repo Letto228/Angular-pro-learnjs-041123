@@ -1,0 +1,14 @@
+{{title}}
+
+<div>
+  <button (click)="onClickComponent()">Insert component</button>
+  <button (click)="onClickTemplate(declaratedTemplateRef)">Insert template</button>
+  <button (click)="onClickClear()">Clear</button>
+</div>
+
+<div #viewContainer></div>
+
+<ng-template #declaratedTemplateRef>
+  <h3>Its template</h3>
+  <app-declarated></app-declarated>
+</ng-template>

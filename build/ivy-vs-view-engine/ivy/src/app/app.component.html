@@ -1,0 +1,16 @@
+<app-header
+    [title]="title"
+></app-header>
+<div
+    [style.width.px]="100"
+    [style.height.px]="5"
+    class="{{divClasses}}"
+></div>
+<h2>Hi</h2>
+<h3
+    class="shadow"
+    (click)="check()"
+>
+    It's my content
+    {{textContent}}
+</h3>
