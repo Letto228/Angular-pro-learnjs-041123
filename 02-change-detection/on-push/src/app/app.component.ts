@@ -11,19 +11,22 @@ export class AppComponent {
 
   counter = 0;
 
-  constructor() {
-    setInterval(() => {
-      this.counter += 1;
-    }, 1000);
-  }
+  // constructor() {
+  //   setInterval(() => {
+  //     this.counter += 1;
+  //   }, 1000);
+  // }
 
   // or
 
-  // mutationCounter = {counter: 0};
+  mutationCounter = {counter: 0};
 
-  // constructor() {
-  //   setInterval(() => {
-  //     this.mutationCounter.counter += 1;
-  //   }, 1000);
-  // }
+  constructor() {
+    setInterval(() => {
+      this.mutationCounter.counter += 1;
+      // this.mutationCounter = {
+      //   counter: this.mutationCounter.counter + 1,
+      // };
+    }, 1000);
+  }
 }

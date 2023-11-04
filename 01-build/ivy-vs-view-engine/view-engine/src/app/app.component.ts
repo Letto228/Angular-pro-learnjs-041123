@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ivy';
+  title = 'view engine';
   textContent = 'text content';
   divClasses = 'line';
 

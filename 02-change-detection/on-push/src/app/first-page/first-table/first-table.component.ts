@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-first-table',
@@ -10,10 +10,10 @@ export class FirstTableComponent {
 
   counter = 0;
 
-  constructor() {
+  constructor(private readonly cd: ChangeDetectorRef) {
     setInterval(() => {
       this.counter += 1;
+      // this.cd.markForCheck();
     }, 1000);
   }
-
 }

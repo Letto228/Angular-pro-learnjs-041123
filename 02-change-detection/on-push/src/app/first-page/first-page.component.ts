@@ -13,7 +13,7 @@ export class FirstPageComponent {
   constructor(changeDetector: ChangeDetectorRef) {
     setInterval(() => {
       this.counter += 1;
-      changeDetector.markForCheck();
+      // changeDetector.markForCheck();
     }, 1000);
   }
 

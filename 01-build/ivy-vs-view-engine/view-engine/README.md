@@ -1,0 +1,1 @@
+`Template HTML` (компиляция)-> `Описание шаблона` (runtime)-> `Интерпритатор Angular` (runtime)-> `DOM`

@@ -10,9 +10,11 @@ export class AppComponent implements AfterViewChecked {
   counter = 0;
 
   ngAfterViewChecked(): void {
-    this.counter += 1;
-    
-    console.log('Increment', this.counter);
+    // setTimeout(() => {
+      this.counter += 1;
+
+      console.log('Increment', this.counter);
+    // });
   }
 
   onLogTitle() {
