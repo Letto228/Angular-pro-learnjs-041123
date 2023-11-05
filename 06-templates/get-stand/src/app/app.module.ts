@@ -7,6 +7,7 @@ import { RockComponent } from './animals/rock/rock.component';
 import { CatComponent } from './animals/cat/cat.component';
 import { DogComponent } from './animals/dog/dog.component';
 import { FoxComponent } from './animals/fox/fox.component';
+import { ColorDirective } from './color.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FoxComponent } from './animals/fox/fox.component';
     DogComponent,
     FoxComponent,
     RockComponent,
+    ColorDirective,
   ],
   imports: [
     BrowserModule

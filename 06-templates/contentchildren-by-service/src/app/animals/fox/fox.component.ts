@@ -8,6 +8,12 @@ import { Animal } from '../../animal';
       fox: <strong>{{phrase}}</strong>
     </p>
   `,
+  // providers: [
+  //   {
+  //     provide: Animal,
+  //     useExisting: FoxComponent,
+  //   }
+  // ]
 })
 export class FoxComponent extends Animal {
   phrase = ''

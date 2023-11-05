@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject, Injector, Optional, inject } from '@angular/core';
+import { token } from '../../app.component';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  constructor() {
+    // console.log('HomeComponent', inject(token))
+    console.log('HomeComponent', inject(Injector))
+  }
 }

@@ -17,5 +17,10 @@ import { TopBarModule } from './top-bar/top-bar.module';
     CarouselModule,
     TopBarModule,
   ],
+  providers: [
+    // ...CarouselModule.providers
+    // ...TopBarModule.providers
+    // ...myProviders
+  ],
 })
 export class HomeModule { }

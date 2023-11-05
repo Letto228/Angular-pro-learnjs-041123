@@ -5,11 +5,11 @@ import { InnerLogicService } from './inner-logic.service';
 @Component({
   selector: 'carousel',
   templateUrl: './carousel.component.html',
-  providers: [InnerLogicService],
+  // providers: [InnerLogicService],
 
   // or
 
-  // viewProviders: [ InnerLogicService ]
+  viewProviders: [InnerLogicService]
 })
 export class CarouselComponent implements AfterContentInit {
   private embeddedView?: ViewRef;

@@ -1,15 +1,15 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from "@angular/core";
 
-interface IDumpNgIfContext<T> {
+interface IMyNgIfContext<T> {
   $implicit: T;
-  appDumpNgIf: T;
+  appMyNgIf: T;
 }
 
 @Directive({
-  selector: '[appDumpNgIf]',
+  selector: '[appMyNgIf]',
 })
-export class DumpNgIfDirective<T> {
-  @Input() set appDumpNgIf(data: T | null | undefined) {
+export class MyNgIfDirective<T> {
+  @Input() set appMyNgIf(data: T | null | undefined) {
     const isContainerHasView = this.viewContainerRef.length;
     const needClear = !data && isContainerHasView;
 
@@ -24,13 +24,27 @@ export class DumpNgIfDirective<T> {
     if (needCreateView) {
       this.viewContainerRef.createEmbeddedView(this.templateRef, {
         $implicit: data,
-        appDumpNgIf: data,
+        appMyNgIf: data,
       });
     }
   }
 
   constructor(
     private readonly viewContainerRef: ViewContainerRef,
-    private readonly templateRef: TemplateRef<IDumpNgIfContext<T>>
+    private readonly templateRef: TemplateRef<IMyNgIfContext<T>>
   ) {}
+
+  static ngTemplateContextGuard<T>(
+    _directive: MyNgIfDirective<T>,
+    _context: unknown,
+  ): _context is IMyNgIfContext<T> {
+    return true;
+  }
+
+  static ngTemplateGuard_appMyNgIf<T>(
+    _directive: MyNgIfDirective<T>,
+    _inputValue: unknown,
+  ): _inputValue is T {
+    return true;
+  }
 }

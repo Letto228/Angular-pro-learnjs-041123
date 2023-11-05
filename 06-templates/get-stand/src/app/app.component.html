@@ -1,7 +1,9 @@
 <app-zoo>
-  <cat></cat>
-  <dog></dog>
-  <rock></rock>
-  <fox></fox>
-  <p>just an element</p>
+  <div #colorDirective>
+    <cat #animal></cat>
+    <dog #animal></dog>
+    <rock></rock>
+    <fox #animal></fox>
+    <p appColor #colorDirective="color">just an element</p>
+  </div>
 </app-zoo>

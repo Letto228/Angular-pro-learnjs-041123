@@ -8,7 +8,8 @@ import { Animal } from '../animal';
 })
 export class ZooComponent {
 
-  @ContentChildren(/* ? */) animals: QueryList<Animal> = new QueryList();
+  @ContentChildren('animal') animals: QueryList<Animal> = new QueryList();
+  // @ContentChildren(Animal) animals: QueryList<Animal> = new QueryList();
 
   say() {
     this.animals.forEach(animal => animal.say());

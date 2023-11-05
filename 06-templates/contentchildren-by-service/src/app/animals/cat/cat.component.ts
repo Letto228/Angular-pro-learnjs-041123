@@ -8,6 +8,12 @@ import { Animal } from '../../animal';
       cat: <strong>{{phrase}}</strong>
     </p>
   `,
+  providers: [
+    {
+      provide: Animal,
+      useExisting: CatComponent,
+    }
+  ]
 })
 export class CatComponent extends Animal {
   phrase = ''

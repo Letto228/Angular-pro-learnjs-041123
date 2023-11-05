@@ -3,11 +3,19 @@ import { AdminComponent } from "./admin/admin.component";
 
 export const pagesRoutes: Route[] = [
     {
-        path: 'admin',
-        component: AdminComponent,
-    },
-    {
-        path: 'home',
-        loadComponent: () => import('./home/home.component').then(m => m.HomeComponent),
-    },
+        path: '',
+        providers: [
+            
+        ],
+        children: [
+            {
+                path: 'admin',
+                component: AdminComponent,
+            },
+            {
+                path: 'home',
+                loadComponent: () => import('./home/home.component').then(m => m.HomeComponent),
+            },
+        ]
+    }
 ]

@@ -12,15 +12,21 @@ export class AppComponent {
   private container!: ViewContainerRef;
 
   onClickComponent() {
+    import('./undeclarated/undeclarated.component').then(m => {
+      const ref = this.container.createComponent(m.UndeclaratedComponent);
 
+      console.log(ref);
+    });
   }
 
   onClickTemplate(template: TemplateRef<unknown>) {
+    const viewRef = this.container.createEmbeddedView(template, {name: 'Egor'});
 
+    console.log(viewRef);
   }
 
   onClickClear() {
-
+    this.container.clear();
   }
 
 }

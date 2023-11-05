@@ -1,5 +1,8 @@
 <button (click)="needView = !needView">View notification</button>
 
-<h1 *appMyNgIf="data">
+<h1 *appMyNgIf="data; let contextData">
+  Hello! {{data | json}}
+</h1>
+<h1 *ngIf="data; let contextData">
   Hello! {{data | json}}
 </h1>

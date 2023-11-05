@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { token } from '../../app.component';
 
 @Component({
   selector: 'app-admin',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
-
+  constructor() {
+    console.log('AdminComponent', inject(token))
+  }
 }

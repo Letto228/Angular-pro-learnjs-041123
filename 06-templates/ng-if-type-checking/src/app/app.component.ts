@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ng-if-type-checking';
 
-  data = {
+  data: object | undefined = {
     name: 'Egor',
     working: true,
   }

@@ -8,7 +8,8 @@
 
 <div #viewContainer></div>
 
-<ng-template #declaratedTemplateRef>
+<ng-template #declaratedTemplateRef let-myName="name">
   <h3>Its template</h3>
   <app-declarated></app-declarated>
+  {{myName}}
 </ng-template>

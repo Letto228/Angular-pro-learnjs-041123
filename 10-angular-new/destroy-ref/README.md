@@ -37,10 +37,9 @@ C Angular 16:
 ```ts
 @Component({...})
 export class MyComponent {
-
   constructor() {
     unknownObservable$
-        .pipe(takeUntilDestroyed()) // Аргумент в takeUntilDestroyed не передаем, т.к. находимся в Injection Context
+        .pipe(takeUntilDestroyed()) // Аргумент в takeUntilDestroyed не передаем, т.к. находимся в Injection Scope
         .subscribe();
   }
 }

@@ -12,5 +12,4 @@ export class HackerComponent {
       innerLogicService.timer = 100;
     }
   }
-
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'stadealone-bootstrap';
+
+  constructor(
+    @Inject('name') name: string,
+  ) {
+    console.log(name);
+  }
 }
